@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Create Post{% endblock %}
+
+{% block content %}
+{% if error %} <p>{{ error }}</p> {% endif %}
+<form action="{{ action }}" method="POST">
+  <fieldset>
+    <legend>{% if article %}Edit{% else %}Create{% endif %} Post</legend>
+    {% if article %}
+      <input type="hidden" name="id" id="id" value="{{ article.id }}">
+    {% endif %}
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" value="{{ article.title }}">
+    <label for="author">Author</label>
+    <input type="email" name="author" id="author" value="{{ article.author }}">
+    <label for="content">Content</label>
+    <textarea name="content" id="" cols="30" rows="10">{{ article.content }}</textarea>
+    <label for="tags">Tags</label>
+    <input type="text" name="tags" id="tags" value="{{ article.tags }}">
+    <label for="created_at">Created at</label>
+    <input type="datetime" name="created_at" id="created_at" value="{{ article.created_at|date('U') }}">
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+{% endblock %}

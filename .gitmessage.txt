@@ -1,0 +1,21 @@
+
+
+# The subject should provide a meaningful commit message, which:
+# - The first line of the commit message should be a short description (50
+#   characters is the soft limit), and should skip the full stop.
+# - Uses the imperative, present tense: “change” not “changed” or “changes”.
+#   includes motivation for the change, and contrasts its implementation with
+#   previous behaviour.
+
+# The body should provide a meaningful commit message, which:
+# - Wrapping your commit messages to 72 columns is a good thing.
+
+# Add, Mod(ify), Rem(ove), Ref(actoring), Fix, Doc(umentation) and Rea(dability)
+
+# Add: New function to rule the world.
+# Mod: Extend function to rule the world.
+# Rem: freeSpeech is not used anymore.
+# Ref: Extract empathy stuff to an abstract class.
+# Fix: RUL-42 or #42 Starvation need to be initialised before Energy to avoid the nullpointer in People.
+# Doc: Removed old TODO and extra space in header.
+# Rea: Format class.

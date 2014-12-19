@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+  <article>
+    <h1><a href="article.php?id={{ article.id }}">{{ article.title }}</a></h1>
+    <strong>by <a href="mailto:{{ article.author }}">{{ article.author }}</a> on <time datetime="{{ article.created_at|date("F jS \\a\\t g:ia") }}">{{ article.created_at|date("F jS \\a\\t g:ia") }}</time></strong>
+    <p>{{ article.content }}</p>
+    <p>{{ article.tags }}</p>
+  </article>
+{% endblock %}

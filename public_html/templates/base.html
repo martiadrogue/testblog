@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>{% block title %}Blog Exam{% endblock %}</title>
+</head>
+<body>
+    {% if session %} <a href="?logout">LOGOUT</a> {% endif %}
+    {% block content %}
+      <h1>Welcome to my awesome Blog</h1>
+    {% endblock %}
+</body>
+</html>
